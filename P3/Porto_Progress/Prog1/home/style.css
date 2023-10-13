@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: khaki;
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 50px;
+    margin: auto;
+}
+
+img:hover{
+    transform: scale(2.0);
+    transition: 0.5s;
+}
+
+hr{
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
