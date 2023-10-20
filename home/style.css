@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: khaki;
+}
+
+:root{
+    --main-color:#8f20da;
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 50px;
+    margin: auto;
+}
+
+img:hover{
+    transform: scale(2.0);
+    transition: 0.5s;
+}
+
+hr{
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.Vtop{
+    color: red;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+nav a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+    transition: .2s linear;
+}
+
