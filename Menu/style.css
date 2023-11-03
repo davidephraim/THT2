@@ -37,16 +37,24 @@ html::-webkit-scrollbar-thumb{
 
 body{
     background: var(--bg);
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     height: 100vh;
     margin: 0;
+    grid-template-areas: 
+    'header header header'
+    'container-1 container-1 container-1'
+    'container-2 container-2 container-2'
+    'footer footer footer';
+    gap:0;
+    padding: 10px;
+    grid-template-columns: 0.3fr 1.5fr;
+    grid-template-rows: 0.5fr 1fr 1.3fr;
 }
 
 .header{
     background: var(--bg);
-    display: flex;
-    /* flex: 10%; */
+    grid-area: header;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 5%;
@@ -119,7 +127,7 @@ body{
 .container-1{
     padding:5rem;
     /* display: flex; */
-    flex: 1;
+    grid-area: container-1;
     overflow: auto;
     position: relative;
 }
@@ -140,7 +148,7 @@ body{
 .container-2{
     padding:5rem;
     /* display: flex; */
-    flex: 1;
+    grid-area: container-2;
     overflow: auto;
     position: relative8;
 }
@@ -159,7 +167,7 @@ body{
 }
 
 .footer{
-    display: flex;
+    grid-area: footer;
     /* flex: 10%; */
     background-color: #362720;
     color: white;
