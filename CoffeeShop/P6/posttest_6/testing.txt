@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dE's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Nav -->
+    <nav>
+        <ul>
+            <h1 class="title">Davclass <span class="title">Ephraim</span></h1>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Achivement</a>
+            <a href="">Contact</a>
+        </ul>
+    </nav>
+    <!-- End Nav -->
+
+    <!-- Start Content 1 -->
+    <div class="content1">
+        <h1 class="left">Thinker</h1>
+        <h1 class="right">&lt;coder&gt;</h1>
+        <img src="me.jpg" alt="">
+    </div>
+    <!-- End Content 1 -->
+    <!-- Start Content 2 -->
+    <h1>Informasi Siswa</h1>
+    <p>Nama: <span id="nama"></span></p>
+    <p>Umur: <span id="umur"></span>Tahun</p>
+    <p>Alamat: <span id="alamat"></span></p>
+    <p>Nilai Siswa: <span id="nilai"></span></p>
+    <p>Rata-rata Nilai: <span id="rata-rata"></span></p>
+    <p>Status Lulus: <span id="status"></span></p>
+    <!-- End Content 2 -->
+</body>
+<script>	
+    let siswa={
+        nama:"David",
+        umur:10,
+        nilai:[85,90,78,92,88],
+        alamat:{
+            jalan:"JL Cipulir VI",
+            kota:"Jakarta",
+        },
+        lulus: function(){
+            let totalNilai=0
+            for(let i=0; i<this.nilai.length; ++i) totalNilai += this.nilai[i];
+            
+            let rataRata = totalNilai / this.nilai.length;
+
+            if(rataRata >= 70) return true;
+            else return false
+        },
+    }
+
+    let rataRata = siswa.nilai
+
+    document.getElementById("nama").innerText = siswa.nama;
+    document.getElementById("umur").textContent = siswa.umur;
+    document.getElementById("alamat").textContent = siswa.alamat.kota + ", " + siswa.alamat.jalan;
+    document.getElementById("nilai").textContent = siswa.nilai.join(", ");
+    document.getElementById("rata-rata").textContent = rataRata;
+
+    if(siswa.lulus()) document.getElementById("rata-rata").textContent = "Siswa telah lulus";
+    else document.getElementById("rata-rata").textContent = "Siswa tidak lulus";
+
+</script>
+</html>
